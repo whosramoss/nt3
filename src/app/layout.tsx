@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import AppProvider from "@providers/AppProvider";
-import { baseMetadata } from "@shared/meta";
-import { fontNeueMontreal } from "@shared/fonts";
-import CustomCursor from "@components/Cursor";
+import { baseMetadata } from "@utils/meta";
+import { fontNeueMontreal } from "@utils/fonts";
+import CustomCursor from "@app/_components/Cursor";
 import "@styles/global.css";
+import { cn } from "@utils/utils";
 
 export const metadata: Metadata = baseMetadata;
 
@@ -15,7 +16,7 @@ export default function RootLayout({
 
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={fontNeueMontreal.className}>
+      <body className={cn('bg-primary', fontNeueMontreal.className)}>
         <AppProvider>
           <CustomCursor />
           {children}
