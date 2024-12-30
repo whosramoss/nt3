@@ -42,7 +42,7 @@
 ```
 
 ## How to build 
-- Before generating the build, don't forget to update the [metadata](./src/shared/meta.ts) file and set ```isLocalMetadata = false```.
+- Before generating the build, don't forget to update the [metadata](./src/utils/meta.ts) file and set ```isLocalMetadata = false```.
 - To generate a static compilation, the [next.config.mjs](./next.config.mjs) file must have the object below :
 ```bash
 const staticbuild = {
@@ -92,8 +92,8 @@ src/
 ## Hooks 
 - [useAnimationCursor](./src/hooks/useAnimationCursor.ts)
 - [useAnimationFadeIn](./src/hooks/useAnimationFadeIn.ts)
-- [useApiFetchFromQuery](./src/hooks/useApiFetch.ts) (Using [React-Query](https://www.npmjs.com/package/react-query))
-- [useApiFetchFromSwr](./src/hooks/useApiFetch.ts) (Using [SWR](https://www.npmjs.com/package/swr))
+- [useApiFetchFromQuery](./src/hooks/useApiFetchFromQuery.ts) (Using [React-Query](https://www.npmjs.com/package/react-query))
+- [useApiFetchFromSwr](./src/hooks/useApiFetchFromSwr.ts) (Using [SWR](https://www.npmjs.com/package/swr))
 
 ## Contributing 
 If you want to contribute to `nt3`, please make sure to review the [contribution guidelines](https://github.com/whosramoss/nt3/blob/master/CONTRIBUTING.md). This project makes use of [GitHub issues](https://github.com/whosramoss/nt3/issues) for
