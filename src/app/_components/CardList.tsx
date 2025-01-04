@@ -54,7 +54,3 @@ export default function GeometryList() {
     </Grid>
   )
 }
-
-function useApiFetch<T>(arg0: { url: string; }): { data: any; isLoading: any; error: any; } {
-  throw new Error("Function not implemented.");
-}
