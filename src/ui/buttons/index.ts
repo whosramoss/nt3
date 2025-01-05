@@ -5,5 +5,5 @@ import ThemeButton from "@ui/buttons/ThemeButton";
 export const Button = {
   Chip: ChipButton,
   Link: LinkButton,
-  Theme: ThemeButton
-}
+  Theme: ThemeButton,
+};

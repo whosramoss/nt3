@@ -10,4 +10,11 @@ export const geometrySchema = z.object({
 
 export const geometryListSchema = z.array(geometrySchema);
 
-export type TGeometry = z.infer<typeof geometrySchema>;
+export type GeometryModel = z.infer<typeof geometrySchema>;
+
+export const geometryApiResponseSchema = z.object({
+  data: z.array(geometrySchema),
+});
+export type GeometryApiResponseModel = z.infer<
+  typeof geometryApiResponseSchema
+>;

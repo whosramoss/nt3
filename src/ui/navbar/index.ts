@@ -6,4 +6,4 @@ export const NavBar = {
   Root: NavBarRoot,
   Left: NavBarLeft,
   Right: NavBarRight,
-}
+};

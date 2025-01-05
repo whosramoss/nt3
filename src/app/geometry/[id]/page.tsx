@@ -4,10 +4,12 @@ import React from "react";
 import { GeometryCanvas } from "@ui/geometry-canvas";
 
 interface GeometryByParamsProps {
-  params: { id: string }
+  params: { id: string };
 }
 
-export default function GeometryByParamsPage({ params }: GeometryByParamsProps) {
+export default function GeometryByParamsPage({
+  params,
+}: GeometryByParamsProps) {
   return (
     <GeometryCanvas.Root>
       <GeometryCanvas.Loader>
@@ -16,6 +18,5 @@ export default function GeometryByParamsPage({ params }: GeometryByParamsProps) 
         </GeometryCanvas.Config>
       </GeometryCanvas.Loader>
     </GeometryCanvas.Root>
-  )
+  );
 }
-

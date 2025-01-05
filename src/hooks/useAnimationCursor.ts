@@ -60,7 +60,7 @@ export const useAnimationCursor = (speed: number): CursorValues => {
         positionRef.current.distanceY = lerp(destinationY, mouseY, 0.2);
         if (
           Math.abs(positionRef.current.distanceX) +
-          Math.abs(positionRef.current.distanceY) <
+            Math.abs(positionRef.current.distanceY) <
           0.1
         ) {
           positionRef.current.destinationX = mouseX;

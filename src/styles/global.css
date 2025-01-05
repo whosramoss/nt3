@@ -4,17 +4,17 @@
 
 @layer base {
   :root {
-    --primary:#ffffff;
+    --primary: #ffffff;
     --secondary: #f4f4f4;
     --third: #262626;
-    --black:#161616;
+    --black: #161616;
   }
 
   .dark {
-    --primary:  #161616; 
+    --primary: #161616;
     --secondary: #262626;
     --third: #f4f4f4;
-    --black:#ffffff;
+    --black: #ffffff;
   }
 }
 
@@ -27,13 +27,15 @@
   body {
     @apply overflow-x-hidden;
   }
-  
+
   .card-size {
-    @apply sm:h-[496px] h-[308px] rounded-xl
+    @apply h-[308px] rounded-xl sm:h-[496px];
+  }
+  .card-mobile-text {
+    @apply text-2xl text-black md:hidden
   }
 }
 
 ::-webkit-scrollbar {
-  width: 0px ;
+  width: 0px;
 }
-

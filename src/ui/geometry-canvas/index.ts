@@ -8,4 +8,4 @@ export const GeometryCanvas = {
   Config: GeometryCanvasConfig,
   Loader: GeometryCanvasLoader,
   Root: GeometryCanvasRoot,
-}
+};

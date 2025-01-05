@@ -4,10 +4,10 @@ import { CommonsProps } from "@utils/utils";
 
 export default function GeometryCanvasRoot({ children }: CommonsProps) {
   return (
-    <div className='overflow-hidden h-screen bg-primary'>
+    <div className="h-screen overflow-hidden bg-primary">
       <Canvas shadows camera={{ position: [-2, 2, 4] }}>
         {children}
       </Canvas>
     </div>
-  )
+  );
 }

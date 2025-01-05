@@ -6,7 +6,7 @@ interface TApiRequest {
     method: HttpMethodEnum;
     body?: BodyInit;
   };
-};
+}
 
 enum HttpMethodEnum {
   POST = "POST",
@@ -51,11 +51,6 @@ export const useApiFetchFromSwr = <T>({ url, query }: TApiRequest) => {
     return res.json();
   };
 
-  const { data, error, isLoading, isValidating } = useSWR<{
-    success: boolean,
-    data: T
-  }>(url, setFetch);
 
-
-  return { data: data?.data, error, isLoading, isValidating };
+  return useSWR<T>(url, setFetch);
 };

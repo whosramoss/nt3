@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React from "react";
 import { Stats, Environment, OrbitControls } from "@react-three/drei";
@@ -15,7 +15,11 @@ export default function GeometryCanvasConfig({ children }: CommonsProps) {
 
   return (
     <React.Fragment>
-      <Environment files={'/images/venice_sunset_1k.hdr.jpg'} background backgroundBlurriness={0.8} />
+      <Environment
+        files={"/images/venice_sunset_1k.hdr.jpg"}
+        background
+        backgroundBlurriness={0.8}
+      />
       <gridHelper position-y={0} visible={config.gridHelper} />
       <mesh receiveShadow scale={1}>
         {children}
@@ -25,5 +29,5 @@ export default function GeometryCanvasConfig({ children }: CommonsProps) {
       <axesHelper args={[5]} visible={config.axesHelper} />
       {config.stats && <Stats />}
     </React.Fragment>
-  )
+  );
 }

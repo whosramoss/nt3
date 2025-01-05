@@ -13,10 +13,9 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={cn('bg-primary', fontNeueMontreal.className)}>
+      <body className={cn("bg-primary", fontNeueMontreal.className)}>
         <AppProvider>
           <CustomCursor />
           {children}

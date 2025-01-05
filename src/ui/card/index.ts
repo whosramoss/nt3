@@ -8,4 +8,4 @@ export const Card = {
   OpacityImage: CardOpacityImage,
   Root: CardRoot,
   Text: CardText,
-}
+};

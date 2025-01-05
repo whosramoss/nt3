@@ -2,7 +2,6 @@ import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 import ms from "ms";
 
-
 export const capitalize = (str: string) => {
   if (!str || typeof str !== "string") return str;
   return str.charAt(0).toUpperCase() + str.slice(1);
@@ -19,27 +18,26 @@ export const cn = (...inputs: ClassValue[]) => {
 
 export const timeAgo = (timestamp: Date, timeOnly?: boolean): string => {
   if (!timestamp) return "never";
-  return `${ms(Date.now() - new Date(timestamp).getTime())}${timeOnly ? "" : " ago"
-    }`;
+  return `${ms(Date.now() - new Date(timestamp).getTime())}${
+    timeOnly ? "" : " ago"
+  }`;
 };
 
 export const lerp = (start: number, end: number, amt: number) => {
   return (1 - amt) * start + amt * end;
 };
 
-
 export const openExternalLink = (link: string) => {
-  window.open(link, "_blank")
-}
-
+  window.open(link, "_blank");
+};
 
 export const threeLinks = [
-  { title: 'Docs', link: 'https://threejs.org/docs/' },
-  { title: 'Examples', link: 'https://threejs.org/examples/' },
-  { title: 'Journey', link: 'https://threejs-journey.com/' },
+  { title: "Docs", link: "https://threejs.org/docs/" },
+  { title: "Examples", link: "https://threejs.org/examples/" },
+  { title: "Journey", link: "https://threejs-journey.com/" },
 ];
 
 export interface CommonsProps {
   className?: string;
-  children?: React.ReactNode
+  children?: React.ReactNode;
 }

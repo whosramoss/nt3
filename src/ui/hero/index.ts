@@ -6,5 +6,4 @@ export const Hero = {
   Root: HeroRoot,
   Title: HeroTitle,
   SubTitle: HeroSubTitle,
-
-}
+};

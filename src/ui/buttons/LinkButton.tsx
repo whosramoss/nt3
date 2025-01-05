@@ -5,7 +5,7 @@ import Link from "next/link";
 interface LinkButtonProps extends CommonsProps {
   href: string;
   target?: string;
-};
+}
 
 export default function LinkButton({
   className,
@@ -19,7 +19,7 @@ export default function LinkButton({
       target={target}
       className={cn(
         "cursor-pointer font-semibold",
-        "text-third hover:text-primary/50 dark:text-third",
+        "hover:text-primary/50 text-third dark:text-third",
         className,
       )}
     >

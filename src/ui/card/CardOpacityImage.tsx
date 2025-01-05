@@ -6,10 +6,13 @@ import React from "react";
 import { useState } from "react";
 
 interface CardOpacityProps extends CommonsProps {
-  image: string
+  image: string;
 }
 
-export default function CardOpacityImage({ children, image }: CardOpacityProps) {
+export default function CardOpacityImage({
+  children,
+  image,
+}: CardOpacityProps) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -19,7 +22,7 @@ export default function CardOpacityImage({ children, image }: CardOpacityProps) 
     >
       <div
         className={cn(
-          "flex flex-col px-5 pb-5 absolute bottom-0 left-0 z-30 hidden w-full items-start justify-between opacity-0 transition-opacity duration-300 ease-in-out md:flex lg:px-5 lg:pb-5",
+          "absolute bottom-0 left-0 z-30 flex hidden w-full flex-col items-start justify-between px-5 pb-5 opacity-0 transition-opacity duration-300 ease-in-out md:flex lg:px-5 lg:pb-5",
           { "opacity-100": isHovered },
         )}
       >
@@ -32,11 +35,10 @@ export default function CardOpacityImage({ children, image }: CardOpacityProps) 
         )}
       ></div>
       <img
-        className="justify-center w-full rounded-xl bg-primary bg-cover bg-center object-cover card-size"
+        className="card-size w-full justify-center rounded-xl bg-primary bg-cover bg-center object-cover"
         src={image}
         alt="image"
       />
     </div>
-
   );
 }

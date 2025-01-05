@@ -4,7 +4,12 @@ import { CommonsProps } from "@utils/utils";
 
 export default function HeroTitle({ className, children }: CommonsProps) {
   return (
-    <h1 className={cn("z-30 w-full text-center text-4xl sm:text-8xl font-bold leading-2 tracking-[0.2px]  tracking-wider cursor-none", className)}>
+    <h1
+      className={cn(
+        "leading-2 z-30 w-full cursor-none text-center text-4xl font-bold tracking-[0.2px]  tracking-wider sm:text-8xl",
+        className,
+      )}
+    >
       {children}
     </h1>
   );

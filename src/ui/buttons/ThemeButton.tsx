@@ -43,18 +43,20 @@ export default function ThemeButton() {
     }
   }
 
-
   return (
     <motion.div
       ref={animateRef}
       initial={initial}
       animate={animate}
       variants={variants}
-      className="z-50 fixed flex px-1 py-1 right-[5%] bottom-8  gap-[4px] rounded-full backdrop-blur-3xl bg-[#696c7157] ">
-
-      <div onClick={handleTheme} className={`${style.default} ${style.light}`}><FiSun /></div>
-      <div onClick={handleTheme} className={`${style.default} ${style.dark}`}><FiMoon /></div>
+      className="fixed bottom-8 right-[5%] z-50 flex gap-[4px] rounded-full  bg-[#696c7157] px-1 py-1 backdrop-blur-3xl "
+    >
+      <div onClick={handleTheme} className={`${style.default} ${style.light}`}>
+        <FiSun />
+      </div>
+      <div onClick={handleTheme} className={`${style.default} ${style.dark}`}>
+        <FiMoon />
+      </div>
     </motion.div>
   );
 }
-

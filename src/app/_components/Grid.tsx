@@ -7,9 +7,8 @@ import { CommonsProps } from "@utils/utils";
 import { cn } from "@utils/utils";
 
 export default function Grid({ className, children }: CommonsProps) {
-
-  const { animateRef, animate, initial, setDelayVariant } = useAnimationFadeIn();
-
+  const { animateRef, animate, initial, setDelayVariant } =
+    useAnimationFadeIn();
 
   return (
     <motion.div
@@ -19,7 +18,7 @@ export default function Grid({ className, children }: CommonsProps) {
       animate={animate}
       variants={setDelayVariant({ delay: 0.5, duration: 1.5 })}
       className={cn(
-        "py-20 w-[90vw] place-content-center place-items-center ",
+        "w-[90vw] place-content-center place-items-center py-20 ",
         "grid grid-cols-1",
         "sm:grid-cols-3",
         "gap-x-5 gap-y-7",
@@ -27,11 +26,6 @@ export default function Grid({ className, children }: CommonsProps) {
       )}
     >
       {children}
-
     </motion.div>
-
   );
 }
-
-
-
