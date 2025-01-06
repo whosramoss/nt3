@@ -40,11 +40,3 @@ export interface CommonsProps {
   className?: string;
   children?: React.ReactNode;
 }
-
-
-export interface DelayProps {
-  delay?: number;
-  duration?: number;
-  y?: string;
-  hasStaggerChildren?: boolean;
-}
