@@ -1,19 +1,12 @@
 import { AnimationProps, useAnimation, Variants } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
-
-interface DelayVariant {
-  delay?: number;
-  duration?: number;
-  y?: string;
-  hasStaggerChildren?: boolean;
-}
+import { DelayProps } from "@utils/utils";
 
 interface FadeInResponse {
   animateRef: (node?: Element | null | undefined) => void;
   animate: AnimationProps["animate"];
   initial: string;
-  setDelayVariant: (props: DelayVariant) => any;
 }
 
 export const useAnimationFadeIn = (
@@ -28,41 +21,42 @@ export const useAnimationFadeIn = (
     triggerOnce: true,
   });
 
-  const setDelayVariant = ({
-    delay = 0,
-    duration = 1,
-    y = "2em",
-    hasStaggerChildren = false,
-  }: DelayVariant) => {
-    if (hasStaggerChildren) {
-      return {
-        hidden: { opacity: 0 },
-        visible: {
-          opacity: 1,
-          transition: {
-            staggerChildren: 0.2,
-          },
-        },
-      };
-    }
-
-    return {
-      hidden: { opacity: 0, y: y },
-      visible: {
-        opacity: 1,
-        y: `0em`,
-        transition: {
-          delay: delay,
-          duration: duration,
-          ease: [0.2, 0.65, 0.3, 0.9],
-        },
-      },
-    };
-  };
-
   useEffect(() => {
     animate.start(inView ? firstState : secondState);
   }, [animate, inView]);
 
-  return { animateRef, animate, initial: secondState, setDelayVariant };
+  return { animateRef, animate, initial: secondState };
+};
+
+
+export const setDelay = ({
+  delay = 0,
+  duration = 1,
+  y = "2em",
+  hasStaggerChildren = false,
+}: DelayProps) => {
+  if (hasStaggerChildren) {
+    return {
+      hidden: { opacity: 0 },
+      visible: {
+        opacity: 1,
+        transition: {
+          staggerChildren: 0.2,
+        },
+      },
+    };
+  }
+
+  return {
+    hidden: { opacity: 0, y: y },
+    visible: {
+      opacity: 1,
+      y: `0em`,
+      transition: {
+        delay: delay,
+        duration: duration,
+        ease: [0.2, 0.65, 0.3, 0.9],
+      },
+    },
+  };
 };

@@ -5,18 +5,13 @@ import { useAnimationFadeIn } from "@hooks/useAnimationFadeIn";
 import { motion } from "framer-motion";
 import { CommonsProps } from "@utils/utils";
 import { cn } from "@utils/utils";
+import { FadeIn } from "@ui/fade-in";
 
 export default function Grid({ className, children }: CommonsProps) {
-  const { animateRef, animate, initial, setDelayVariant } =
-    useAnimationFadeIn();
-
   return (
-    <motion.div
-      aria-hidden="true"
-      ref={animateRef}
-      initial={initial}
-      animate={animate}
-      variants={setDelayVariant({ delay: 0.5, duration: 1.5 })}
+    <FadeIn.Item
+      delay={0.5}
+      duration={1.5}
       className={cn(
         "w-[90vw] place-content-center place-items-center py-20 ",
         "grid grid-cols-1",
@@ -26,6 +21,6 @@ export default function Grid({ className, children }: CommonsProps) {
       )}
     >
       {children}
-    </motion.div>
+    </FadeIn.Item>
   );
 }

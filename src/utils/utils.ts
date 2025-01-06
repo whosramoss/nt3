@@ -18,9 +18,8 @@ export const cn = (...inputs: ClassValue[]) => {
 
 export const timeAgo = (timestamp: Date, timeOnly?: boolean): string => {
   if (!timestamp) return "never";
-  return `${ms(Date.now() - new Date(timestamp).getTime())}${
-    timeOnly ? "" : " ago"
-  }`;
+  return `${ms(Date.now() - new Date(timestamp).getTime())}${timeOnly ? "" : " ago"
+    }`;
 };
 
 export const lerp = (start: number, end: number, amt: number) => {
@@ -40,4 +39,12 @@ export const threeLinks = [
 export interface CommonsProps {
   className?: string;
   children?: React.ReactNode;
+}
+
+
+export interface DelayProps {
+  delay?: number;
+  duration?: number;
+  y?: string;
+  hasStaggerChildren?: boolean;
 }

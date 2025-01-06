@@ -45,8 +45,13 @@ export default function GeometryList() {
             <Card.Text>{title}</Card.Text>
             <Card.Text className="inline lg:text-xl">{description}</Card.Text>
           </Card.OpacityImage>
-          <Card.Text className="card-mobile-text">{title}</Card.Text>
-          <Card.Text className="card-mobile-text">{description}</Card.Text>
+          {[title, description].map((value, textindex) => (
+            <Card.Text
+              key={textindex}
+              className="card-mobile-text">
+              {value}
+            </Card.Text>
+          ))}
         </Card.Root>
       ))}
     </Grid>
