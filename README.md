@@ -66,7 +66,8 @@ src/
 ├── providers/
 ├── styles/
 ├── ui/
-└── utils/
+├── utils/
+└── middleware
 ```
 
 | Name | Summary | Description |
