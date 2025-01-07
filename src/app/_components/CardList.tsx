@@ -13,7 +13,7 @@ export default function GeometryList() {
 
   const { data, isLoading, error } =
     useApiFetchFromQuery<GeometryApiResponseModel>({
-      url: "/api/geometry",
+      url: '/api/geometry',
       key: "geometry",
     });
 

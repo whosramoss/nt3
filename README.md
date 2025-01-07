@@ -1,5 +1,5 @@
 <a href="https://github.com/whosramoss/nt3">
-  <img alt="NT3" src="./public/nt3-thumbnail.png" />
+  <img alt="NT3" src="./public/thumbnail.png" />
   <h1 align="center">NT3</h1>
 </a>
 
