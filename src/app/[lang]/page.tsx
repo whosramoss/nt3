@@ -53,16 +53,17 @@ export default function HomePage({
                 {i18n.getTextByLocale(hero.subtitle)}
               </Hero.SubTitle>
             </FadeIn.Item>
-            {/* <FadeIn.Item className="flex flex-row py-2" delay={0.25} duration={1.5}>
-              {threeLinks.map(({ title, link }, index) => (
-                <Button.Chip key={index} onClick={(e) => {
-                  e.preventDefault()
-                  openExternalLink(link)
-                }}>
+            <FadeIn.Item className="flex flex-row py-2" delay={0.25} duration={1.5}>
+              {threeLinks.map(({ title, href }, index) => (
+                <Button.Link
+                  key={index}
+                  href={href}
+                  className="rounded-full px-4 py-2 font-semibold text-primary hover:bg-[#696c71]"
+                >
                   {title}
-                </Button.Chip>
+                </Button.Link>
               ))}
-            </FadeIn.Item> */}
+            </FadeIn.Item>
           </Hero.Root>
           <Center>
             <CardList />

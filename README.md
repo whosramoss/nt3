@@ -42,7 +42,7 @@
 ```
 
 ## How to build 
-- Before generating the build, don't forget to update the [metadata](./src/utils/meta.ts) file and set ```isLocalMetadata = false```.
+- Before generating the build, don't forget to update the [layout](./src/app/layout.tsx) file and set ```isLocalMetadata = false```.
 - To generate a static compilation, the [next.config.mjs](./next.config.mjs) file must have the object below :
 ```bash
 const staticbuild = {

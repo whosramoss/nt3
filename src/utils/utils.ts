@@ -31,9 +31,9 @@ export const openExternalLink = (link: string) => {
 };
 
 export const threeLinks = [
-  { title: "Docs", link: "https://threejs.org/docs/" },
-  { title: "Examples", link: "https://threejs.org/examples/" },
-  { title: "Journey", link: "https://threejs-journey.com/" },
+  { title: "Docs", href: "https://threejs.org/docs/" },
+  { title: "Examples", href: "https://threejs.org/examples/" },
+  { title: "Journey", href: "https://threejs-journey.com/" },
 ];
 
 export interface CommonsProps {

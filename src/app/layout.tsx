@@ -9,8 +9,8 @@ import "@styles/global.css";
 export const generateStaticParams = AppI18nConfig.setLanguagesParams;
 
 export const generateMetadata = () => {
-  const isLocalTest = true;
-  const m = new AppMetadata(isLocalTest)
+  const isLocalMetadata = true;
+  const m = new AppMetadata(isLocalMetadata)
   return m.completeMetadata;
 }
 
