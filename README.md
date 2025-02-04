@@ -4,7 +4,7 @@
 </a>
 
 <p align="center">
-  This template provides a starting point for building Next.js apps with Tailwind, TypeScript and Three.js.
+  This template provides a starting point for building Next.js apps with Tailwind CSS, TypeScript and Three.js.
 </p>
 
 <div align="center">
