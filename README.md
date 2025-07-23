@@ -8,16 +8,16 @@
 </p>
 
 <div align="center">
-  <img src="https://img.shields.io/badge/next.js-242424?style=for-the-badge&logo=nextdotjs" alt="Website">
-  <img src="https://img.shields.io/badge/React-563D7C?style=for-the-badge&logo=React&logoColor=fff" alt="React">
-  <img src="https://img.shields.io/badge/Tailwind-FEFEFE?style=for-the-badge&logo=tailwindcss" alt="Tailwind">
-  <img src="https://img.shields.io/badge/Typescript-007acc?style=for-the-badge&logo=typescript&logoColor=fff" alt="TypeScript">
-  <img src="https://img.shields.io/badge/Framer%20Motion-CC6699?style=for-the-badge&logo=framer" alt="Framer Motion">
+  <img src="https://img.shields.io/badge/next.js-323330?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Website">
+  <img src="https://img.shields.io/badge/React-323330?style=for-the-badge&logo=React&logoColor=white" alt="React">
+  <img src="https://img.shields.io/badge/Tailwind-323330?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind">
+  <img src="https://img.shields.io/badge/Typescript-323330?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
+  <img src="https://img.shields.io/badge/Framer%20Motion-323330?style=for-the-badge&logo=framer&logoColor=white" alt="Framer Motion">
   <br/>
-  <img src="https://img.shields.io/badge/Prettier-242424?style=for-the-badge&logo=prettier" alt="Prettier">
-  <img src="https://img.shields.io/badge/eslint-0170FE?style=for-the-badge&logo=eslint" alt="eslint">
-  <img src="https://img.shields.io/badge/zod-242424?style=for-the-badge&logo=zod" alt="zod">
-   <img src="https://img.shields.io/badge/three-242424?style=for-the-badge&logo=three.js" alt="three">
+  <img src="https://img.shields.io/badge/Prettier-323330?style=for-the-badge&logo=prettier&logoColor=white" alt="Prettier">
+  <img src="https://img.shields.io/badge/eslint-323330?style=for-the-badge&logo=eslint&logoColor=white" alt="eslint">
+  <img src="https://img.shields.io/badge/zod-323330?style=for-the-badge&logo=zod&logoColor=white" alt="zod">
+   <img src="https://img.shields.io/badge/three-323330?style=for-the-badge&logo=three.js&logoColor=white" alt="three">
 </div>
 <br/>
 
