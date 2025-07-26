@@ -1,5 +1,5 @@
-import { CommonsProps } from "@utils/utils";
-import { cn } from "@utils/utils";
+import { CommonsProps } from "src/shared/utils/utils";
+import { cn } from "src/shared/utils/utils";
 
 export default function Center({ children, className }: CommonsProps) {
   return (

@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { GeometryCanvas } from "@ui/geometry-canvas";
+import { GeometryCanvas } from "src/shared/ui/geometry-canvas";
 
 interface GeometryByParamsProps {
   params: { id: string };

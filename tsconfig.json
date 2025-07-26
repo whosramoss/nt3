@@ -20,12 +20,12 @@
     "baseUrl": "./",
     "paths": {
       "@app/*": ["src/app/*"],
-      "@hooks/*": ["src/hooks/*"],
+      "@hooks/*": ["src/shared/hooks/*"],
       "@models/*": ["src/models/*"],
-      "@providers/*": ["src/providers/*"],
+      "@providers/*": ["src/shared/providers/*"],
       "@styles/*": ["src/styles/*"],
-      "@ui/*": ["src/ui/*"],
-      "@utils/*": ["src/utils/*"],
+      "@ui/*": ["src/shared/ui/*"],
+      "@utils/*": ["src/shared/utils/*"],
       "@server/*": ["server/*"]
     }
   },

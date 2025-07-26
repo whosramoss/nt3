@@ -1,10 +1,10 @@
 "use client";
 
 import React from "react";
-import { Card } from "@ui/card";
+import { Card } from "src/shared/ui/card";
 import { GeometryApiResponseModel } from "@models/geomtry-model";
 import Grid from "@app/_components/Grid";
-import { useApiFetchFromQuery } from "@hooks/useApiFetchFromQuery";
+import { useApiFetchFromQuery } from "src/shared/hooks/useApiFetchFromQuery";
 
 export default function GeometryList() {
   // const { data, isLoading, error } = useApiFetchFromSwr<GeometryApiResponseModel>({
@@ -13,7 +13,7 @@ export default function GeometryList() {
 
   const { data, isLoading, error } =
     useApiFetchFromQuery<GeometryApiResponseModel>({
-      url: '/api/geometry',
+      url: "/api/geometry",
       key: "geometry",
     });
 
@@ -46,9 +46,7 @@ export default function GeometryList() {
             <Card.Text className="inline lg:text-xl">{description}</Card.Text>
           </Card.OpacityImage>
           {[title, description].map((value, textindex) => (
-            <Card.Text
-              key={textindex}
-              className="card-mobile-text">
+            <Card.Text key={textindex} className="card-mobile-text">
               {value}
             </Card.Text>
           ))}

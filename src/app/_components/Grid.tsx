@@ -1,11 +1,9 @@
 "use client";
 
-import React, { ReactNode } from "react";
-import { useAnimationFadeIn } from "@hooks/useAnimationFadeIn";
-import { motion } from "framer-motion";
-import { CommonsProps } from "@utils/utils";
-import { cn } from "@utils/utils";
-import { FadeIn } from "@ui/fade-in";
+import React from "react";
+import { CommonsProps } from "src/shared/utils/utils";
+import { cn } from "src/shared/utils/utils";
+import { FadeIn } from "src/shared/ui/fade-in";
 
 export default function Grid({ className, children }: CommonsProps) {
   return (

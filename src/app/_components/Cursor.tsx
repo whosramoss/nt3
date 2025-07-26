@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import { cn } from "@utils/utils";
-import { useAnimationCursor } from "@hooks/useAnimationCursor";
+import { cn } from "src/shared/utils/utils";
+import { useAnimationCursor } from "src/shared/hooks/useAnimationCursor";
 
 export default function CustomCursor({ speed = 0.1 }) {
   const { cursorRef, visible } = useAnimationCursor(speed);
