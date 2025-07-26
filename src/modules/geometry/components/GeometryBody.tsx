@@ -7,10 +7,6 @@ import Grid from "@ui/structure/StructureGrid";
 import { useApiFetchFromQuery } from "src/shared/hooks/useApiFetchFromQuery";
 
 export default function GeometryBody() {
-  // const { data, isLoading, error } = useApiFetchFromSwr<GeometryApiResponseModel>({
-  //   url: "/api/geometry",
-  // });
-
   const { data, isLoading, error } =
     useApiFetchFromQuery<GeometryApiResponseModel>({
       url: "/api/geometry",
