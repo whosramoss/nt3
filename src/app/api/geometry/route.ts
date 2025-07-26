@@ -1,24 +1,6 @@
-import { geometryApiResponseSchema } from "@models/geomtry-model";
-import { NextResponse, NextRequest } from "next/server";
-import payload from "@server/payload.json";
+import { NextRequest } from "next/server";
+import { GET_GEOMETRY_LIST } from "src/modules/geometry/api/get-geometry-list";
 
-export async function GET(request: NextRequest) {
-  try {
-    const { data, success, error } = geometryApiResponseSchema.safeParse(payload);
-
-    if (!success) {
-      console.error("[Validation Error]", error.issues);
-      return NextResponse.json(
-        { message: "Invalid data format" },
-        { status: 400 },
-      );
-    }
-
-    return NextResponse.json(data, { status: 200 });
-  } catch (err) {
-    return NextResponse.json(
-      { message: "failed to load data from route GET" },
-      { status: 500 },
-    );
-  }
+export async function GET(_: NextRequest) {
+  return await GET_GEOMETRY_LIST();
 }
