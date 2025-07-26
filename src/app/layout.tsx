@@ -1,5 +1,5 @@
 import { fontNeueMontreal } from "src/shared/utils/app-font";
-import CustomCursor from "@app/_components/Cursor";
+import CustomCursor from "@ui/Cursor";
 import { cn } from "src/shared/utils/utils";
 import AppMetadata from "src/shared/utils/app-metadata";
 import AppI18nConfig, { LocaleProps } from "src/shared/utils/app-i18n-config";
