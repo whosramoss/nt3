@@ -10,7 +10,7 @@ export const fontQuestrial = Questrial({
 export const fontNeueMontreal = localFont({
   src: [
     {
-      path: "../../public/fonts/NeueMontreal-Regular.woff2",
+      path: "../../../public/fonts/NeueMontreal-Regular.woff2",
       weight: "400",
       style: "normal",
     },

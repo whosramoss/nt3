@@ -21,9 +21,8 @@
     "paths": {
       "@app/*": ["src/app/*"],
       "@hooks/*": ["src/shared/hooks/*"],
-      "@models/*": ["src/models/*"],
       "@providers/*": ["src/shared/providers/*"],
-      "@styles/*": ["src/styles/*"],
+      "@styles/*": ["src/shared/styles/*"],
       "@ui/*": ["src/shared/ui/*"],
       "@utils/*": ["src/shared/utils/*"],
       "@server/*": ["server/*"]
