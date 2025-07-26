@@ -58,18 +58,27 @@ const staticbuild = {
   npm run build
 ```
 
-## Project Structure Overview
+## Project Modular Structure Overview
 
 ```bash
 src/
 ├── app/
-├── hooks/
-├── models/
-├── providers/
-├── styles/
-├── ui/
-├── utils/
-└── middleware
+│   ├── manifest.ts
+│   ├── layout.tsx
+│   └── page.tsx
+├── modules/
+│   └── {module-name}/
+│       ├── api/
+│       ├── components/
+│       ├── services/
+│       ├── schemas/
+│       └── pages/
+└── shared/
+    ├── ui/
+    ├── styles/
+    ├── providers/
+    ├── utils/
+    └── hooks/
 ```
 
 | Name        | Summary                                             | Description                                                                                                                                                                                                                                                 |
