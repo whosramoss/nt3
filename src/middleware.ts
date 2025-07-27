@@ -3,6 +3,7 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
 const PUBLIC_FILE = /\.(.*)$/;
+const STATIC_ROUTE_PREFIXES = ["/_next", "/server/", "/api/", "/geometry"];
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
@@ -10,10 +11,10 @@ export function middleware(request: NextRequest) {
   if (AppI18nConfig.isUrlLocalized(pathname)) return;
 
   const isRequestForStaticFiles =
-    pathname.startsWith("/_next") ||
-    pathname.includes("/server/") ||
-    pathname.includes("/api/") ||
-    PUBLIC_FILE.test(pathname);
+    PUBLIC_FILE.test(pathname) ||
+    STATIC_ROUTE_PREFIXES.some(
+      (prefix) => pathname.startsWith(prefix) || pathname.includes(prefix),
+    );
 
   if (isRequestForStaticFiles) return;
 

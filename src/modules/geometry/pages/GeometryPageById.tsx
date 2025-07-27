@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import { GeometryCanvas } from "src/modules/geometry/components/geometry-canvas";
 

@@ -18,3 +18,15 @@ export const geometryApiResponseSchema = z.object({
 export type GeometryApiResponseModel = z.infer<
   typeof geometryApiResponseSchema
 >;
+
+export const geometryIds = [
+  "box",
+  "sphere",
+  "cone",
+  "cylinder",
+  "ring",
+  "icosahedron",
+  "dodecahedron",
+  "torus",
+  "torusKnot",
+];
