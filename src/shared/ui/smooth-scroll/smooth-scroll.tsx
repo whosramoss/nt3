@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { ReactLenis } from "@studio-freight/react-lenis";
+import { ReactLenis } from 'lenis/react'
 import { CommonsProps } from "src/shared/utils/utils";
 
 export function SmoothScroll({ children }: CommonsProps) {
