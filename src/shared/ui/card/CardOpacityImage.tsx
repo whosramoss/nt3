@@ -22,7 +22,7 @@ export default function CardOpacityImage({
     >
       <div
         className={cn(
-          "absolute bottom-0 left-0 z-30 flex hidden w-full flex-col items-start justify-between px-5 pb-5 opacity-0 transition-opacity duration-300 ease-in-out md:flex lg:px-5 lg:pb-5",
+          "absolute bottom-0 left-0 z-30 hidden w-full flex-col items-start justify-between px-5 pb-5 opacity-0 transition-opacity duration-300 ease-in-out md:flex lg:px-5 lg:pb-5",
           { "opacity-100": isHovered },
         )}
       >

@@ -1,14 +1,10 @@
-"use client";
-
 import React from "react";
 
-interface GeometryCanvasComponentProps {
-  id: string;
+interface Props {
+  type: string;
 }
 
-export default function GeometryCanvasComponent({
-  id,
-}: GeometryCanvasComponentProps) {
+export default function ThreeElementByType({ type }: Props) {
   const map: { [key: string]: React.FC } = {
     box: () => <boxGeometry />,
     sphere: () => <sphereGeometry />,
@@ -21,7 +17,7 @@ export default function GeometryCanvasComponent({
     torusKnot: () => <torusKnotGeometry />,
   };
 
-  const Component = map[id] || null;
+  const Component = map[type] || null;
 
   return Component ? <Component /> : <div>Component not found</div>;
 }

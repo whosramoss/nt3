@@ -1,4 +1,4 @@
-import { AnimationProps, useAnimation, Variants } from "framer-motion";
+import { AnimationProps, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 

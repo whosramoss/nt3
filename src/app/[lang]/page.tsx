@@ -5,7 +5,7 @@ import GeometryBody from "src/modules/geometry/components/GeometryBody";
 import { NavBar } from "src/shared/ui/navbar";
 import { Button } from "src/shared/ui/buttons";
 import { threeLinks } from "src/shared/utils/utils";
-import { Structure } from "@ui/structure";
+import { Layout } from "@ui/layout";
 import { FadeIn } from "src/shared/ui/fade-in";
 import SmoothScroll from "src/shared/ui/smooth-scroll";
 import AppI18nConfig, { LocaleProps } from "src/shared/utils/app-i18n-config";
@@ -63,10 +63,10 @@ export default function HomePage({ params: { lang } }: HomePageProps) {
               ))}
             </FadeIn.Item>
           </Hero.Root>
-          <Structure.Center>
+          <Layout.Center>
             <GeometryBody />
-          </Structure.Center>
-          <Structure.Center className="py-16 tracking-wide">
+          </Layout.Center>
+          <Layout.Center className="py-16 tracking-wide">
             <FadeIn.Item delay={0.4} duration={1.5}>
               <Text tag="div" className="py-2 text-base font-bold sm:text-4xl">
                 {i18n.getTextByLocale(end.text)}
@@ -84,7 +84,7 @@ export default function HomePage({ params: { lang } }: HomePageProps) {
                 {i18n.getTextByLocale(end.button)}
               </Button.Link>
             </FadeIn.Item>
-          </Structure.Center>
+          </Layout.Center>
         </FadeIn.Root>
       </SmoothScroll>
     </React.Fragment>

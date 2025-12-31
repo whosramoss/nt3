@@ -3,15 +3,14 @@
 import React from "react";
 import { Card } from "src/shared/ui/card";
 import { GeometryApiResponseModel } from "src/modules/geometry/schemas/geometry-schema";
-import Grid from "@ui/structure/StructureGrid";
-import { useApiFetchFromQuery } from "src/shared/hooks/useApiFetchFromQuery";
+import { Layout } from "@ui/layout";
+import { useFetch } from "@hooks/useFetch";
 
 export default function GeometryBody() {
-  const { data, isLoading, error } =
-    useApiFetchFromQuery<GeometryApiResponseModel>({
-      url: "/api/geometry",
-      key: "geometry",
-    });
+  const { data, isLoading, error } = useFetch<GeometryApiResponseModel>({
+    url: "/api/geometry",
+    key: "geometry",
+  });
 
   if (error) {
     return (
@@ -23,18 +22,18 @@ export default function GeometryBody() {
 
   if (isLoading) {
     return (
-      <Grid>
+      <Layout.Grid>
         {Array(3)
           .fill(0)
           .map((_, index) => (
             <Card.Loading key={index} />
           ))}
-      </Grid>
+      </Layout.Grid>
     );
   }
 
   return (
-    <Grid>
+    <Layout.Grid>
       {data?.data.map(({ route, image, title, description }, index) => (
         <Card.Root key={index} route={route}>
           <Card.OpacityImage image={image}>
@@ -48,6 +47,6 @@ export default function GeometryBody() {
           ))}
         </Card.Root>
       ))}
-    </Grid>
+    </Layout.Grid>
   );
 }

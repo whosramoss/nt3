@@ -1,6 +1,10 @@
+import { Layout } from "@ui/layout";
 import React from "react";
-import GeometryPageLoading from "src/modules/geometry/pages/GeometryPageLoading";
 
 export default function Loading() {
-  return <GeometryPageLoading />;
+  return (
+    <Layout.Center className="py-16 tracking-wide">
+      <h2 className="text-2xl font-bold sm:text-4xl">Loading</h2>
+    </Layout.Center>
+  );
 }

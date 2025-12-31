@@ -24,8 +24,7 @@
       "@providers/*": ["src/shared/providers/*"],
       "@styles/*": ["src/shared/styles/*"],
       "@ui/*": ["src/shared/ui/*"],
-      "@utils/*": ["src/shared/utils/*"],
-      "@server/*": ["server/*"]
+      "@utils/*": ["src/shared/utils/*"]
     }
   },
   "include": [
