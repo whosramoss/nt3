@@ -5,7 +5,7 @@ import { CommonsProps } from "src/shared/utils/utils";
 import { cn } from "src/shared/utils/utils";
 import { FadeIn } from "src/shared/ui/fade-in";
 
-export default function StructureGrid({ className, children }: CommonsProps) {
+export default function LayoutGrid({ className, children }: CommonsProps) {
   return (
     <FadeIn.Item
       delay={0.5}

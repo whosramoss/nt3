@@ -5,12 +5,11 @@ interface QueryProps {
   key: string;
 }
 
-export const useApiFetchFromQuery = <T>({ url, key }: QueryProps) => {
-
+export const useFetch = <T>({ url, key }: QueryProps) => {
   const fetcher = async (): Promise<T> => {
     const response = await fetch(url);
     return response.json();
-  }
+  };
 
   return useQuery<T>({ queryKey: [key], queryFn: fetcher });
 };

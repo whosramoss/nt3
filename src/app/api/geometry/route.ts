@@ -1,6 +1,6 @@
 import { NextRequest } from "next/server";
-import { GET_GEOMETRY_LIST } from "src/modules/geometry/api/get-geometry-list";
+import { GeometryService } from "src/modules/geometry/services/geometry-service";
 
 export async function GET(_: NextRequest) {
-  return await GET_GEOMETRY_LIST();
+  return await GeometryService.getGeometryList();
 }

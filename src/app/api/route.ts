@@ -1,15 +1,12 @@
-import { NextResponse, NextRequest } from "next/server";
+import { ApiResponse } from "@utils/api-response";
+import { NextRequest } from "next/server";
 
-export async function GET(request: NextRequest) {
+export async function GET(_: NextRequest) {
   try {
-    return NextResponse.json(
-      { message: "default response from route GET" },
-      { status: 200 },
-    );
+    return ApiResponse.ok("default response from route GET");
   } catch (err) {
-    return NextResponse.json(
-      { message: "failed to load data from route GET" },
-      { status: 500 },
+    return ApiResponse.internalServerError(
+      "failed to load data from route GET",
     );
   }
 }
